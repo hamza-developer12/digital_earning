@@ -158,7 +158,11 @@ class _SignupScreenState extends State<SignupScreen> {
                     validator: (value) => value!.isEmpty ? "Please Re Enter Password" : null,
                   ),
                   SizedBox(height: height * 0.02),
-                  CustomButton(btnText: "Register", onTap: (){})
+                  CustomButton(btnText: "Register", onTap: (){
+                    if(_formKey.currentState!.validate()) {
+
+                    }
+                  })
                 ],
               ),
             ),

@@ -13,7 +13,8 @@ class LoginScreen extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginScreen> {
   final _formKey = GlobalKey<FormState>();
-  TextEditingController _emailController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -43,9 +44,16 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: height * 0.04,
               ),
               CustomTextField(
-                controller: _emailController,
-                hintText: "Enter Email",
-                validator: (value) => "Please provide a valid email",
+                controller: _passwordController,
+                hintText: "Enter Password",
+                obscureText: true,
+                validator: (value) {
+                  if(value!.isEmpty) {
+                    return "Please provide password";
+                  }else if(value.length < 6) {
+                    return "Password must be 6 characters long";
+                  }
+                },
               ),
               SizedBox(height: height * 0.04),
               CustomButton(btnText: "LOGIN", onTap: () {}),
@@ -81,8 +89,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text(
                       "Signup",
                       style:
-                      TextStyle(fontSize: 16, color: Constants.primaryColor),
+                      TextStyle(fontSize: 16, color: Constants.primaryColor,
                     ),
+                  ),
                   )
                 ],
               ),

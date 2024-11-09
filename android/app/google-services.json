@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "919627250407",
+    "project_id": "digital-earning-dc877",
+    "storage_bucket": "digital-earning-dc877.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919627250407:android:0e5d862ac46e24d6944042",
+        "android_client_info": {
+          "package_name": "com.lexusdevelopers.digital_earning"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArfVau_-v2QY_CVeNOWpy2PDC_NIG9loY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
